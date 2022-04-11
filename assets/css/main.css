@@ -1,0 +1,249 @@
+
+/*---------------------COLOR-------------------*/
+:root{
+    --darkgray: #212329;
+    --darkgrayTransparent: #21232961;
+    --brightred: #F9423D;
+    --white: #fff;
+	--lightwhite:rgba(114,114,114,.25)!important;
+    --lightred: #f9433dcc;
+    --lightyellow:  #f4a235;
+    --lightdark: rgba(19, 18, 18, 0.664);
+    --deepdark:#000;
+	--ligthtransparent: rgba(0, 0, 0, 0.107);
+  }
+/*-------------------END COLOR-----------------*/
+
+/*---------------------RESET--------------------*/
+ body{
+   overflow-x: hidden;
+ }
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*{scroll-behavior: smooth}
+
+/*--------------------END RESET----------------*/
+
+/*------------------Burger Menu----------------*/
+
+
+
+
+
+
+
+
+
+
+/*----------------End Burger Menu---------------*/
+.bg-image {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	/* width: 100vw; */
+	height: 100vh;
+	background-color: var(--ligthtransparent);
+	background-image:url("../medias/bkg-images/background-band.jpg");
+	background-size: cover;
+}
+
+.nav-container{
+	width: 100%;
+}
+
+.nav li a {
+    color: var(--white)!important;
+    text-decoration: none!important;
+	text-transform: uppercase;
+	line-height: 60px;
+}
+
+.nav {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: var(--ligthtransparent) ;
+	padding-left: 0;
+	padding-right: 80px;
+	margin-bottom: 0;
+	list-style: none;
+}
+
+/*-----------------------Hover FX Nav menu-----------*/
+span {
+	position: relative;
+	display: block;
+	cursor: pointer;
+  }
+  
+  span:before, span:after {
+	content: '';
+	position: absolute;
+	width: 0%;
+	height: 2px;
+	top: 50%;
+	margin-top: -0.5px;
+	background: #fff;
+  }
+  
+  span:before {
+	left: -1.5px;
+  }
+  span:after {
+	right: 0.5px;
+	background: rgb(255, 0, 0);
+	transition: width 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  
+  span:hover:before {
+	background: rgb(255, 0, 0);
+	width: 100%;
+	transition: width 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+  
+  span:hover:after {
+	background: transparent;
+	width: 100%;
+	transition: 0s;
+  }
+
+
+.main-container{
+	width: 100%;
+	height: auto;
+	background-image: linear-gradient(
+        rgba(42, 41, 41, 0.896), 
+        rgba(5, 5, 5, 0.766)
+      ), url("../medias/bkg-images/dark-layer.jpg");
+
+	background-size: cover;
+}
+
+
+
+.nav-link {
+    font-family: 'Covered By Your Grace', cursive;
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-shadow: 2px 2px 2px rgb(0 0 0);
+}
+
+
+.img-fluid{
+	 filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%); 
+}
+
+span.lb-number{
+	display: none;
+}
+
+.card-img-top{
+	/* filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%); */
+
+}
+
+.release{
+	width: 100%;
+	height: auto;
+	text-align: center;
+
+}
+
+h1{
+	font-family: 'Covered By Your Grace', cursive;
+	font-weight: 400;
+    text-transform: none;
+    font-size: 80px!important;
+    letter-spacing: 0;
+	color: white;
+	text-align: center;
+}
+
+.container{
+ 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
+.cover{
+	width: 400px;
+	height: 400px;
+}
+
+.card{
+	margin: 15px;
+}
+
+.content{
+	
+}
+.container-fluid{
+	
+}
+
+.container-fluid:last-child {
+	
+}
+
+.col-lg{
+	color: #ffffff;
+	font-family: 'Waiting for the Sunrise', cursive;
+	font-weight: 400;
+	font-size: 24px;
+	line-height: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.row{
+	border-top: 1px solid var(--lightwhite);
+	margin-left: 70px!important;
+	margin-right: 70px!important;
+	padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+h2{
+	font-family: 'Covered By Your Grace', cursive;
+	font-weight: 400;
+	font-size: 20px;
+}
+
+.content-text{
+	display: flex;
+	flex-direction:row;
+	background-color: rgba(76, 75, 75, 0.413);
+	width: 50%;
+	margin: auto;
+}
+
+.content-text p{
+	padding: 20px;
+	font-family: 'Waiting for the Sunrise', cursive;
+	font-weight: 400;
+	font-size: 24px;
+	color:#ffffff;
+}

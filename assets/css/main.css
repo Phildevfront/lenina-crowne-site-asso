@@ -36,8 +36,21 @@
 	height: 100vh;
 	background-color: var(--ligthtransparent);
 	background-image:url("../medias/bkg-images/background-band.jpg");
-	filter: grayscale(100%);
+	/* filter: grayscale(100%); */
 	background-size: cover;
+}
+
+.main-title{
+	position: relative;
+	bottom: 200px;
+}
+
+.main-title h1{
+	color: var(--white);
+	font-family: 'Covered By Your Grace', cursive;
+	font-size: 5em;
+	font-weight: 800;
+	color: var(--lightyellow);
 }
 
 .promo{
@@ -331,6 +344,7 @@ span {
 /*--------------------------------CONTACT-----------------------------------------*/
 .contact{
 	padding-top: 80px;
+	padding-bottom: 80px;
 }
 
 .follow{
@@ -364,11 +378,26 @@ footer{
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	padding: 50px 0px;
 }
 
+.social-icons i{
+	padding: 50px;
+}
 
+.fa-facebook:hover{
+	color:#3366cc; 
+	cursor: pointer;
+}
 
+.fa-bandcamp:hover {
+    color: #669999;
+    cursor: pointer;
+}
+
+.fa-twitter:hover {
+    color: #3399ff;
+    cursor: pointer;
+}
   .credit{
 	display:flex;
 	align-items: center;

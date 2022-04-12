@@ -5,6 +5,7 @@
     --white: #fff;
 	--lightwhite:rgba(114,114,114,.25)!important;
     --lightred: #f9433dcc;
+	--darkredtransparent: #801e1b5d;
     --lightyellow:  #f4a235;
     --lightdark: rgba(19, 18, 18, 0.664);
     --deepdark:#000;
@@ -38,41 +39,36 @@
 	background-size: cover;
 }
 
-
-.main-title h1{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items:center;
-	color: var(--white);
-	font-family: 'Covered By Your Grace', cursive;
-	font-size: 10px;
-	font-weight: 800;
-	color: var(--lightyellow);
-}
-
-.w-100.promo.announcement{
+.main-title{
+	width: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
-	align-items:center;
-	text-align: center;
-	margin-bottom: 40px;
-	color: var(--white);
+	align-items: center;
+	justify-content: space-evenly;
 	font-family: 'Covered By Your Grace', cursive;
-	font-weight: 400;
 }
 
-.announcement{
-	background: var(--darkgrayTransparent);
-	padding: 20px 50px;
+.main-title h1{
+	font-size: 80px;
+	font-weight: 800;
+	letter-spacing: 10px;
+	color: var(--lightyellow);
+	margin-bottom: 30%;
 }
+
 .album{
-	 font-size: 60px;
- }
- .soon{
-	font-size: 30px;
+	display: flex;
+	font-size: 60px;
+	font-weight: 400;
+	color: var(--white);
 }
+
+.soon{
+	color: var(--white);
+  	font-size: 30px;
+}
+
+
  
 
 
@@ -82,6 +78,7 @@
 
 .nav-container{
 	width: 100%;
+	height: 100px;
 }
 
 .nav li a {
@@ -211,7 +208,7 @@ span {
 	align-items: center;
 	border-top: 1px solid rgba(255, 255, 255, 0.5);
 	border-left: 1px solid rgba(255, 255, 255, 0.5);
-	/* backdrop-filter: blur(5px); */
+	backdrop-filter: blur(5px); 
 	background-image: url("../medias/releases/cover-last-350.jpg");
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -322,11 +319,16 @@ span {
 	justify-content: center;
 	align-items: center;
 }
-.row{
+.container-fluid .row{
 	border-top: 1px solid var(--lightwhite);
 	margin-left: 70px!important;
 	margin-right: 70px!important;
 	padding: 20px;
+}
+
+.container-fluid .row:hover{
+	background-color: var(--darkredtransparent);
+	cursor: pointer;
 }
 
 

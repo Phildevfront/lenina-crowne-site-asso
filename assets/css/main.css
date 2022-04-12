@@ -26,31 +26,47 @@
 }
 
 *{scroll-behavior: smooth}
-
 /*--------------------END RESET----------------*/
 
-/*------------------Burger Menu----------------*/
-
-
-
-
-
-
-
-
-
-
-/*----------------End Burger Menu---------------*/
+/*---------------------HEADER---------------------*/
 .bg-image {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
-	/* width: 100vw; */
 	height: 100vh;
 	background-color: var(--ligthtransparent);
 	background-image:url("../medias/bkg-images/background-band.jpg");
+	filter: grayscale(100%);
 	background-size: cover;
 }
+
+.promo{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	text-align: center;
+	margin-bottom: 80px;
+	color: var(--white);
+	font-family: 'Covered By Your Grace', cursive;
+	font-weight: 400;
+}
+
+.announcement{
+	background: var(--darkgrayTransparent);
+	padding: 20px 50px;
+}
+.album{
+	 font-size: 60px;
+ }
+ .soon{
+	font-size: 30px;
+}
+ 
+
+
+
+
+/*------------------NAV--------------------------*/
 
 .nav-container{
 	width: 100%;
@@ -63,6 +79,16 @@
 	line-height: 60px;
 }
 
+.nav-link {
+	font-family: 'Covered By Your Grace', cursive;
+	font-size: 1.5em;
+	font-weight: 400;
+	letter-spacing: 2px;
+	color: rgb(255, 255, 255);
+	text-decoration: none;
+	text-shadow: 2px 2px 2px rgb(0 0 0);
+}
+
 .nav {
 	display: flex;
 	flex-wrap: wrap;
@@ -72,8 +98,14 @@
 	margin-bottom: 0;
 	list-style: none;
 }
+/*------------------BURGER MENU----------------*/
 
-/*-----------------------Hover FX Nav menu-----------*/
+
+
+
+/*----------------END BURGER MENU---------------*/
+
+/*---------------Hover FX Nav menu--------------*/
 span {
 	position: relative;
 	display: block;
@@ -91,7 +123,7 @@ span {
   }
   
   span:before {
-	left: -1.5px;
+	left: 0.5px;
   }
   span:after {
 	right: 0.5px;
@@ -110,97 +142,147 @@ span {
 	width: 100%;
 	transition: 0s;
   }
+/*--------------------END Hover FX Nav menu--------------*/
+/*--------------------------END NAV----------------------------*/
+/*-------------------------END HEADER-------------------------------*/
 
-
+/*-------------------------MAIN-------------------------------*/
 .main-container{
 	width: 100%;
 	height: auto;
-	background-image: linear-gradient(
-        rgba(42, 41, 41, 0.896), 
-        rgba(5, 5, 5, 0.766)
-      ), url("../medias/bkg-images/dark-layer.jpg");
-
+	background-image: linear-gradient(rgba(42, 41, 41, 0.896), 
+    rgba(5, 5, 5, 0.766)), url("../medias/bkg-images/dark-layer.jpg");
 	background-size: cover;
 }
+/*-------------------------END MAIN-------------------------------*/
 
-
-
-.nav-link {
-    font-family: 'Covered By Your Grace', cursive;
-    font-size: 1.5em;
-    font-weight: 400;
-    letter-spacing: 2px;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    text-shadow: 2px 2px 2px rgb(0 0 0);
-}
-
-
-.img-fluid{
-	 filter: grayscale(100%);
-	-webkit-filter: grayscale(100%);
-	-moz-filter: grayscale(100%);
-	-ms-filter: grayscale(100%);
-	-o-filter: grayscale(100%); 
-}
-
-span.lb-number{
-	display: none;
-}
-
-.card-img-top{
-	/* filter: grayscale(100%);
-	-webkit-filter: grayscale(100%);
-	-moz-filter: grayscale(100%);
-	-ms-filter: grayscale(100%);
-	-o-filter: grayscale(100%); */
-
-}
-
-.release{
-	width: 100%;
-	height: auto;
-	text-align: center;
-
-}
-
-h1{
+.title-section{
 	font-family: 'Covered By Your Grace', cursive;
 	font-weight: 400;
-    text-transform: none;
-    font-size: 80px!important;
-    letter-spacing: 0;
+	text-transform: none;
+	font-size: 60px!important;
+	letter-spacing: 0;
 	color: white;
 	text-align: center;
 }
 
+/*-------------------------SECTION RELEASES-----------------------*/
+
+.album-cover{
+	width: 100%;
+	height: auto;
+	text-align: center;
+	padding-top: 80px;
+}
+
 .container{
- 	display: flex;
+	position: relative;
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
+	max-width: 1200px;
+	z-index:1;
 }
 
-.cover{
-	width: 400px;
-	height: 400px;
+.container .card{
+	position: relative;
+	width: 350px;
+	height: 350px;
+	margin: 30px;
+	border-radius: 15px ;
+	box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+	background: rgba(247, 247, 247, 0.1);
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-top: 1px solid rgba(255, 255, 255, 0.5);
+	border-left: 1px solid rgba(255, 255, 255, 0.5);
+	/* backdrop-filter: blur(5px); */
+	background-image: url("../medias/releases/cover-duality-350.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
 }
+
+.container .card .content{
+	padding: 20px;
+	text-align: center;
+	transform: translateY(100px);
+	opacity: 0;
+	transition: 0.5s;
+}
+
+.container .card:hover .content{
+	background: rgba(0, 0, 0, 0.826);
+	transform: translateY(0px);
+	opacity: 1;
+}
+
+.container .card .content h3{
+	font-size: 1.8em;
+	font-family: 'Waiting for the Sunrise', cursive;
+	color: var(--white);
+	z-index: 1;
+}
+
+.container .card .content p{
+	font-size: 1.3em;
+	font-family: 'Waiting for the Sunrise', cursive;
+	font-weight: 400;
+	color: var(--white);
+}
+
+.container .card .content a{
+	position: relative;
+	display: inline-block;
+	padding: 8px 35px;
+	margin-top: 15px;
+	background: #fff;
+	color: var(--deepdark);
+	border-radius: 20px;
+	text-decoration: none;
+	font-family: 'Waiting for the Sunrise', cursive;
+	font-weight: bold;
+	/* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
+}
+
 
 .card{
 	margin: 15px;
 }
 
 .content{
-	
+	width: 350px;
+	height: 350px;
 }
-.container-fluid{
-	
+/*-------------------------END SECTION RELEASES-----------------------*/
+
+/*-------------------------SECTION ABOUT-----------------------------*/
+.about{
+	padding-top: 80px;
+}
+.content-text{
+	display: flex;
+	flex-direction:row;
+	background-color: rgba(76, 75, 75, 0.413);
+	width: 50%;
+	margin: auto;
 }
 
-.container-fluid:last-child {
-	
+.content-text p{
+	padding: 20px;
+	font-family: 'Waiting for the Sunrise', cursive;
+	font-weight: 400;
+	font-size: 24px;
+	color:#ffffff;
 }
+/*-------------------------END SECTION ABOUT-------------------------*/
 
+/*-------------------------SECTION LIVE EVENT-----------------------------*/
+.live{
+	padding-top: 80px;
+}
 .col-lg{
 	color: #ffffff;
 	font-family: 'Waiting for the Sunrise', cursive;
@@ -218,32 +300,86 @@ h1{
 	padding: 20px;
 }
 
+.container-fluid:last-child {
+	
+}
+/*-------------------------END SECTION LIVE EVENT-----------------------------*/
 
-
-
-
-
-
-
-
-h2{
-	font-family: 'Covered By Your Grace', cursive;
-	font-weight: 400;
-	font-size: 20px;
+/*--------------------------SECTION PHOTOS & VIDEO----------------------------*/
+.photos{
+	padding-top: 80px;
 }
 
-.content-text{
+.img-fluid{
+	 filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%); 
+}
+.photo-gallery{
+	margin-bottom: 60px;
+}
+
+.wrapper-video{
 	display: flex;
-	flex-direction:row;
-	background-color: rgba(76, 75, 75, 0.413);
-	width: 50%;
-	margin: auto;
+	justify-content: center;
+	filter: grayscale(100%);
+}
+/*--------------------------END SECTION PHOTOS & VIDEO----------------------------*/
+
+/*--------------------------------CONTACT-----------------------------------------*/
+.contact{
+	padding-top: 80px;
 }
 
-.content-text p{
-	padding: 20px;
+.follow{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.follow p{
+	color: #ffffff;
 	font-family: 'Waiting for the Sunrise', cursive;
 	font-weight: 400;
 	font-size: 24px;
-	color:#ffffff;
 }
+
+/*--------------------------------END CONTACT-----------------------------------------*/
+
+/*-------------------------------FOOTER----------------------------------------------*/
+footer{
+	background-image: linear-gradient(rgba(42, 41, 41, 0.896), 
+    rgba(5, 5, 5, 0.766)), url("../medias/bkg-images/dark-layer.jpg");
+	background-size: cover;
+}
+.social-banner{
+	margin-bottom: 90px;
+	background-color: #000000;
+}
+  
+.social-icons{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 50px 0px;
+}
+
+
+
+  .credit{
+	display:flex;
+	align-items: center;
+	justify-content: space-around;
+	color: #ffffff;
+	font-family: 'Waiting for the Sunrise', cursive;
+	font-weight: 400;
+	font-size: 16px;
+	padding: 50px;
+  }
+
+  .credit a{
+	text-decoration: none;
+  }

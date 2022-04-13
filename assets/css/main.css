@@ -38,46 +38,6 @@
 	background-size: cover;
 }
 
-
-.main-title h1{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items:center;
-	color: var(--white);
-	font-family: 'Covered By Your Grace', cursive;
-	font-size: 10px;
-	font-weight: 800;
-	color: var(--lightyellow);
-}
-
-.w-100.promo.announcement{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items:center;
-	text-align: center;
-	margin-bottom: 40px;
-	color: var(--white);
-	font-family: 'Covered By Your Grace', cursive;
-	font-weight: 400;
-}
-
-.announcement{
-	background: var(--darkgrayTransparent);
-	padding: 20px 50px;
-}
-.album{
-	 font-size: 60px;
- }
- .soon{
-	font-size: 30px;
-}
- 
-
-
-
-
 /*------------------NAV--------------------------*/
 
 .nav-container{
@@ -85,8 +45,8 @@
 }
 
 .nav li a {
-    color: var(--white)!important;
-    text-decoration: none!important;
+	color: var(--white)!important;
+	text-decoration: none!important;
 	text-transform: uppercase;
 	line-height: 60px;
 }
@@ -156,6 +116,46 @@ span {
   }
 /*--------------------END Hover FX Nav menu--------------*/
 /*--------------------------END NAV----------------------------*/
+.main-title{
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	font-family: 'Covered By Your Grace', cursive;
+}
+
+.main-title h1{
+	display: flex;
+	font-size: 80px;
+	font-weight: 800;
+	letter-spacing: 10px;
+	color: var(--lightyellow);
+	margin-bottom: 30%;
+}
+
+.promo{
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 15px 0;
+	background-color: var(--ligthtransparent);
+}
+
+.album{
+	display: flex;
+	font-size: 60px;
+	font-weight: 400;
+	color: var(--white);
+ }
+ .soon{
+	font-size: 30px;
+	color: var(--white);
+}
+ 
 /*-------------------------END HEADER-------------------------------*/
 
 /*-------------------------MAIN-------------------------------*/

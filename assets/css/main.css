@@ -10,13 +10,19 @@
     --lightdark: rgba(19, 18, 18, 0.664);
     --deepdark:#000;
 	--ligthtransparent: rgba(0, 0, 0, 0.56);
+	--lightgraytransparent: rgba(61, 61, 61, 0.185);
   }
 /*-------------------END COLOR-----------------*/
 
 /*---------------------RESET--------------------*/
- body{
-   overflow-x: hidden;
+ html, body{
+	font-size: 16px;
+   	overflow-x: hidden;
  }
+
+ /*Typo : HTML DOM Référence 16px
+ 			unité rem ds éléments parents
+ 			unité em ds éléments enfants*/
 
 *{
   box-sizing: border-box;
@@ -39,17 +45,10 @@
 	background-size: cover;
 }
 
-
-
-
-
-
-
-
 /*--------------------------------NAV--------------------------------*/
 
 .nav-container{
-	width: 100%;
+	width: 100vw;
 	height: 100px;
 }
 
@@ -145,7 +144,7 @@ span:hover:after {
 }
 
 .promo{
-	width: 100%;
+	width: 40%;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
@@ -175,9 +174,9 @@ span:hover:after {
 	background-image: linear-gradient(rgba(42, 41, 41, 0.896), 
     rgba(5, 5, 5, 0.766)), url("../medias/bkg-images/dark-layer.jpg");
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
 }
-
-/*-------------------------END MAIN-------------------------------*/
 
 .title-section{
 	font-family: 'Covered By Your Grace', cursive;
@@ -188,6 +187,7 @@ span:hover:after {
 	color: white;
 	text-align: center;
 }
+/*-------------------------END MAIN-------------------------------*/
 
 /*-------------------------SECTION RELEASES-----------------------*/
 
@@ -206,6 +206,7 @@ span:hover:after {
 	align-items: center;
 	max-width: 1200px;
 	z-index:1;
+	background-color: var(--lightgraytransparent);
 }
 
 .container .card{
@@ -215,7 +216,7 @@ span:hover:after {
 	margin: 30px;
 	border-radius: 5px ;
 	box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-	background: rgba(247, 247, 247, 0.1);
+	background: rgba(0, 0, 0, 0.71);
 	overflow: hidden;
 	display: flex;
 	justify-content: center;
@@ -266,6 +267,13 @@ span:hover:after {
 	z-index: 1;
 }
 
+.container .card .content h4{
+	font-size: 1.8em;
+	font-family: 'Waiting for the Sunrise', cursive;
+	color: var(--white);
+	z-index: 1;
+}
+
 .container .card .content p{
 	font-size: 1.3em;
 	font-family: 'Waiting for the Sunrise', cursive;
@@ -281,7 +289,7 @@ span:hover:after {
 	text-decoration: none;
 	font-family: 'Waiting for the Sunrise', cursive;
 	font-weight: bold;
-	/* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
+	
 }
 
 .container .card .content a:hover{
@@ -289,7 +297,8 @@ span:hover:after {
 }
 
 .container .card .content button{
-	background: #fff;
+	border: 1px solid var(--lightdark);
+	background: var(--white);
 	border-radius: 20px;
 }
 
@@ -315,7 +324,7 @@ span:hover:after {
 .content-text{
 	display: flex;
 	flex-direction:row;
-	background-color: rgba(76, 75, 75, 0.413);
+	background-color: var(--lightgraytransparent);
 	width: 50%;
 	margin: auto;
 }
@@ -337,7 +346,7 @@ span:hover:after {
 	color: #ffffff;
 	font-family: 'Waiting for the Sunrise', cursive;
 	font-weight: 400;
-	font-size: 24px;
+	font-size: 1.5rem;
 	line-height: 35px;
 	display: flex;
 	justify-content: center;
@@ -347,12 +356,30 @@ span:hover:after {
 	border-top: 1px solid var(--lightwhite);
 	margin-left: 70px!important;
 	margin-right: 70px!important;
-	padding: 20px;
+	padding: 10px;
+	transition: all 1s;
 }
 
 .container-fluid .row:hover{
 	background-color: var(--darkredtransparent);
-	cursor: pointer;
+	transition: all 1s;
+}
+
+a.button{
+	font-size: 0.9em;
+	color: var(--white);
+	background-color: var(--deepdark);
+	border: 1px solid var(--white);
+	text-decoration: none;
+	padding: 5px 40px;
+	transition: all 0.1s linear 0.1s;
+}
+
+a.button:hover{
+	background-color: var(--brightred);
+	text-decoration: none;
+	color: var(--white);
+	transition: all 0.1s linear 0.1s;
 }
 
 

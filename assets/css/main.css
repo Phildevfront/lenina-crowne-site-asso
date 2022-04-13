@@ -9,7 +9,7 @@
     --lightyellow:  #f4a235;
     --lightdark: rgba(19, 18, 18, 0.664);
     --deepdark:#000;
-	--ligthtransparent: rgba(0, 0, 0, 0.107);
+	--ligthtransparent: rgba(0, 0, 0, 0.56);
   }
 /*-------------------END COLOR-----------------*/
 
@@ -25,9 +25,9 @@
 }
 
 *{scroll-behavior: smooth}
-/*--------------------END RESET----------------*/
+/*-----------------------------END RESET---------------------------*/
 
-/*---------------------HEADER---------------------*/
+/*-------------------------------HEADER-----------------------------*/
 .bg-image {
 	display: flex;
 	flex-flow: row wrap;
@@ -39,42 +39,14 @@
 	background-size: cover;
 }
 
-.main-title{
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
-	font-family: 'Covered By Your Grace', cursive;
-}
-
-.main-title h1{
-	font-size: 80px;
-	font-weight: 800;
-	letter-spacing: 10px;
-	color: var(--lightyellow);
-	margin-bottom: 30%;
-}
-
-.album{
-	display: flex;
-	font-size: 60px;
-	font-weight: 400;
-	color: var(--white);
-}
-
-.soon{
-	color: var(--white);
-  	font-size: 30px;
-}
-
-
- 
 
 
 
 
-/*------------------NAV--------------------------*/
+
+
+
+/*--------------------------------NAV--------------------------------*/
 
 .nav-container{
 	width: 100%;
@@ -82,7 +54,7 @@
 }
 
 .nav li a {
-    color: var(--white)!important;
+	color: var(--white)!important;
     text-decoration: none!important;
 	text-transform: uppercase;
 	line-height: 60px;
@@ -119,9 +91,9 @@ span {
 	position: relative;
 	display: block;
 	cursor: pointer;
-  }
-  
-  span:before, span:after {
+}
+
+span:before, span:after {
 	content: '';
 	position: absolute;
 	width: 0%;
@@ -129,30 +101,71 @@ span {
 	top: 50%;
 	margin-top: -0.5px;
 	background: #fff;
-  }
-  
-  span:before {
+}
+
+span:before {
 	left: 0.5px;
-  }
-  span:after {
+}
+span:after {
 	right: 0.5px;
 	background: rgb(255, 0, 0);
 	transition: width 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  }
-  
-  span:hover:before {
+}
+
+span:hover:before {
 	background: rgb(255, 0, 0);
 	width: 100%;
 	transition: width 0.2s cubic-bezier(0.22, 0.61, 0.36, 1);
-  }
-  
-  span:hover:after {
+}
+
+span:hover:after {
 	background: transparent;
 	width: 100%;
 	transition: 0s;
-  }
+}
 /*--------------------END Hover FX Nav menu--------------*/
+
 /*--------------------------END NAV----------------------------*/
+
+.main-title{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	font-family: 'Covered By Your Grace', cursive;
+}
+
+.main-title h1{
+	font-size: 80px;
+	font-weight: 800;
+	letter-spacing: 10px;
+	color: var(--lightyellow);
+	margin-bottom: 30%;
+}
+
+.promo{
+	width: 100%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 15px 0;
+	background-color: var(--ligthtransparent);
+}
+
+.album{
+	display: flex;
+	font-size: 60px;
+	font-weight: 400;
+	color: var(--white);
+}
+
+.soon{
+	color: var(--white);
+	  font-size: 30px;
+}
 /*-------------------------END HEADER-------------------------------*/
 
 /*-------------------------MAIN-------------------------------*/
@@ -163,6 +176,7 @@ span {
     rgba(5, 5, 5, 0.766)), url("../medias/bkg-images/dark-layer.jpg");
 	background-size: cover;
 }
+
 /*-------------------------END MAIN-------------------------------*/
 
 .title-section{
@@ -263,14 +277,24 @@ span {
 	position: relative;
 	display: inline-block;
 	padding: 8px 35px;
-	margin-top: 15px;
-	background: #fff;
 	color: var(--deepdark);
-	border-radius: 20px;
 	text-decoration: none;
 	font-family: 'Waiting for the Sunrise', cursive;
 	font-weight: bold;
 	/* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
+}
+
+.container .card .content a:hover{
+	color: var(--lightyellow);
+}
+
+.container .card .content button{
+	background: #fff;
+	border-radius: 20px;
+}
+
+.container .card .content button:hover{
+	background-color: var(--deepdark);
 }
 
 

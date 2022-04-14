@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/mediasqueries.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
 	<!-- BOOTSTRAP CSS -->
 	
@@ -24,12 +24,13 @@
 
 	<!------ICON ------>
 	<script src="https://kit.fontawesome.com/4af066ad9c.js" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 	<title>Lenina Crowne ASSO</title>
 </head>
 <body>
 	<header class="bg-image">
-		<div class="nav-container">
+		<!-- <div class="nav-container">
 			<div id="mobile-menu" class="menu-toggle">
 				<span class="bar"></span>
 				<span class="bar"></span>
@@ -55,7 +56,27 @@
 					<span><a class="nav-link" href="#contact">contact</a></span>
 				</li>
 			</ul>
-		</div>
+		</div> -->
+		<div class="nav-container">
+			<nav id="nav" class="navbar">
+			  <a href="#"><img src="assets/medias/logo/Logo-classic-lenina-jaune.png" alt="Lenina Crowne" id="navbar-logo"></a>
+			  <div class="menu-toggle" id="mobile-menu">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			  </div>
+			  <ul class="nav-menu">
+				<li><a href="#releases" class="nav-links">releases.</a></li>
+				<li><a href="#about" class="nav-links">about us.</a></li>
+				<li><a href="#event" class="nav-links">live.</a></li>
+				<li><a href="#photos" class="nav-links">photos - videos.</a></li>
+				<li><a href="pages/event.html" class="nav-links" target="_blank">events</a></li>
+				<li><a href="#contact" class="nav-links">contact</a></li>
+			  </ul>
+			</nav>
+		</div> 
+
+
 		<div class="main-title">
 			<h1>LENINA CROWNE ASSO.</h1>
 			<div class="promo">
@@ -175,7 +196,7 @@
 		</section>
 		<section id="photos" class="photos">
 			<h2 class="title-section">Photos</h2>
-			<!-- <div class="photo-gallery">
+			<div class="photo-gallery">
 				<div class="container"> 
 					<div class="row photos">
 						<div class="col-sm-6 col-md-4 col-lg-3 item">
@@ -198,7 +219,7 @@
 								<img class="img-fluid" src="assets/medias/gallery/images4-thumb.jpg" alt="Image 4" />
 							</a>
 						</div>
-						<div class="col-sm-6 col-md-4 col-lg-3 item">
+						<!-- <div class="col-sm-6 col-md-4 col-lg-3 item">
 							<a href="assets/medias/gallery/images5.jpg" data-lightbox="photos">
 								<img class="img-fluid" src="assets/medias/gallery/images5-thumb.jpg" alt="Image 5" />
 							</a>
@@ -217,10 +238,10 @@
 							<a href="assets/medias/gallery/images8.jpg" data-lightbox="photos">
 								<img class="img-fluid" src="assets/medias/gallery/images8-thumb.jpg" alt="Image 8" />
 							</a>
-						</div>	
+						</div>	 -->
 					</div>
 				</div>
-			</div> -->
+			</div>
 			
 			<h2 class="title-section">Video</h2>	
 			<div class="wrapper-video">
@@ -267,10 +288,11 @@
 
 		});
 	</script>
-	
+	<script type="text/javascript" src="js/app.js"></script>
+	<script type="text/javascript" src="js/nav-scroll.js"></script>
+	<script type="text/javascript" src="js/navbar-close.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-<!-- <script type="text/javascript" src="js/burgerMenu.js"></script> -->
 </body>
 </html>
